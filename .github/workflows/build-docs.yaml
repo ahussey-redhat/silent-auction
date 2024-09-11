@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  INSTANCE: 'Writerside/sa'
-  ARTIFACT: 'webSilentSA2-all.zip'
+  INSTANCE: 'Writerside/Silent Auction'
+  ARTIFACT: 'webHelpßSA2-all.zip'
   DOCKER_VERSION: '241.18775'
 
 jobs:
