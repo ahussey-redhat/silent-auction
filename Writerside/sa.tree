@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="sa"
+                 name="Silent Auction"
+                 start-page="starter.md">
+
+    <toc-element topic="starter.md"/>
+    <toc-element topic="components.md">
+        <toc-element topic="auctions.md"/>
+        <toc-element topic="bids.md"/>
+        <toc-element topic="users.md"/>
+    </toc-element>
+</instance-profile>
