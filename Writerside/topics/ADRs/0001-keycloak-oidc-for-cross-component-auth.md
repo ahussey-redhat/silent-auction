@@ -10,7 +10,7 @@
 
 Silent Auction has three independent clients that all need to know who's calling and whether they're an admin: the web frontend, the CLI, and (indirectly, as the party enforcing it) the backend API itself. These clients don't share a runtime or a language, so any identity solution has to work as a standalone service they each integrate with independently, rather than shared in-process auth code.
 
-The domain also has a simple but real authorization split — most read operations are public or "any authenticated user," while creating/editing auctions, viewing all bids, and managing users are admin-only (see [Auctions](../auctions.md), [Bids](../bids.md), [Users](../users.md)).
+The domain also has a simple but real authorization split — most read operations are public or "any authenticated user," while creating/editing auctions, viewing all bids, and managing users are admin-only (see [Auctions](auctions.md), [Bids](bids.md), [Users](users.md)).
 
 ## Decision
 
