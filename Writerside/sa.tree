@@ -7,9 +7,15 @@
                  start-page="starter.md">
 
     <toc-element topic="starter.md"/>
+    <toc-element topic="architecture.md"/>
     <toc-element topic="components.md">
         <toc-element topic="auctions.md"/>
         <toc-element topic="bids.md"/>
         <toc-element topic="users.md"/>
+    </toc-element>
+    <toc-element topic="ADRs.md">
+        <toc-element topic="0001-keycloak-oidc-for-cross-component-auth.md"/>
+        <toc-element topic="0002-runtime-environment-configuration-for-frontend.md"/>
+        <toc-element topic="0003-layered-gitops-deployment-via-argocd-app-of-apps.md"/>
     </toc-element>
 </instance-profile>

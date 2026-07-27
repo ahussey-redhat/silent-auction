@@ -1,12 +1,18 @@
 # Auctions
 
-> There are several ways to interact with auctions, as well as several actions that can be performed.
+An auction is the top-level entity being bid on. Anyone can browse open auctions and see the current highest bid; creating, updating, and deleting auctions is restricted to admins.
 
-These actions include:
-- Creating an auction
-- Updating an auction
-- Deleting an auction
+In the frontend, auctions are browsed from the auction list and viewed individually at `/auctions/[id]`, which shows bid history and a place-bid form. The backend also pushes live updates over WebSocket (all auctions every 60s, highest bids every 10s) so open pages stay current without polling.
 
-To perform these actions, you will need to either have access to the official Silent Auction frontend, Silent Auction CLI, or utilise the Silent Auction backend APIs.
+## Endpoints
 
-[OpenAPI Spec](https://silent-auction-backend.qa.blueguardian.co/openapi) 
+| Method | Path | Access |
+|---|---|---|
+| `GET` | `/api/v1/auctions` | Public |
+| `GET` | `/api/v1/auctions/{id}` | Public |
+| `GET` | `/api/v1/auctions/{id}/bids/highest` | Public |
+| `POST` | `/api/v1/auctions` | Admin |
+| `PUT` / `DELETE` | `/api/v1/auctions/{id}` | Admin |
+| `GET` | `/api/v1/auctions/{id}/bids` | Admin |
+
+The OpenAPI spec is served by the backend itself at `/openapi` (Swagger UI at `/swagger-ui`) — see [`silent-auction-backend`](https://github.com/ahenshaw-work/silent-auction-backend) for how to run it locally.
